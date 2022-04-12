@@ -8,7 +8,8 @@
     "heroku-postbuild": "npx webpack --config webpack.config.js --env NODE_ENV=prod",
     "dev": "webpack-dev-server --open --env NODE_ENV=dev",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack --config webpack.config.js --env NODE_ENV=prod"
+    "build": "npx webpack --config webpack.config.js --env NODE_ENV=prod",
+    "publish-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
