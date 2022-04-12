@@ -14,7 +14,7 @@
     "f-push-gh-pages": "git push -f origin gh-pages:gh-pages",
     "delete-gh-branch": "git branch -D gh-pages",
 
-    "publish-pages": "npm run -s build && npm run -s split-gh-pages && npm run -s f-push-gh-pages && npm run -s publish-pages"
+    "publish-pages": "npm run -s build && npm run -s split-gh-pages && npm run -s f-push-gh-pages && npm run -s delete-gh-branch"
   },
   "repository": {
     "type": "git",
