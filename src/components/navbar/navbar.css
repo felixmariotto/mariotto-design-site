@@ -1,0 +1,21 @@
+
+#navbar {
+	background-color: blue;
+	display: flex;
+	justify-content: space-between;
+	padding: 7px 15px;
+}
+
+	#navbar-logo {
+		width:  200px;
+	}
+
+	#navbar-right-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+		#navbar-right-container * {
+			margin: 10px;
+		}

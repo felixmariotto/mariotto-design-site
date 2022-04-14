@@ -20,6 +20,30 @@ export default function Component( options ) {
 
 	}
 
+	// if classes were provided, we add the classes to the element.
+
+	if ( options.classes ) {
+
+		options.classes
+		.split(' ')
+		.forEach( c => component.classList.add( c ) );
+
+	}
+
+	if ( options.id ) {
+
+		component.id = options.id;
+		
+	}
+
+	//
+
+	if ( options.src ) {
+
+		component.src = options.src;
+
+	}
+
 	//
 
 	return component
