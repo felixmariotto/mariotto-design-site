@@ -9,12 +9,7 @@
     "dev": "webpack-dev-server --open --env NODE_ENV=dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack --config webpack.config.js --env NODE_ENV=prod",
-
-    "split-gh-pages": "git subtree split --prefix dist -b gh-pages",
-    "f-push-gh-pages": "git push -f origin gh-pages:gh-pages",
-    "delete-gh-branch": "git branch -D gh-pages",
-
-    "publish-pages": "npm run -s build && npm run -s split-gh-pages && npm run -s f-push-gh-pages && npm run -s delete-gh-branch"
+    "publish-pages": "git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
