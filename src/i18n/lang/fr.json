@@ -1,4 +1,5 @@
 {
-	"title": "c'est ma super entreprise",
-	"subtitle": "crois-moi on est super cool"
+	"navbar-about": "L'entreprise",
+	"navbar-services": "Services",
+	"navbar-contact": "Contact"
 }
