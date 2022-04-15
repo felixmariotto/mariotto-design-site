@@ -1,0 +1,36 @@
+
+#index-page {
+	display: flex;
+	justify-content: center;
+}
+
+/* CAROUSEL */
+
+#index-carousel {
+	width:  calc( 100vh + 25vw );
+	background-color: red;
+}
+
+	#index-carousel section:not(.focus) {
+		display: none;
+	}
+
+	#index-carousel section {
+		position: relative;
+		height: 62vw;
+		max-height: 60vh;
+	}
+
+		#index-carousel section img {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		#index-carousel section h2 {
+			position: relative;
+			z-index: 1;
+			color: var(--font-on-dark);
+		}

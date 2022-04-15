@@ -8,16 +8,22 @@
 	--font-focus-color: #000000;
 	--font-mid-color: #555555;
 	--font-light-color: #bdbdbd;
+	--font-on-dark: #ffffff;
 }
 
 body {
 	margin: 0;
+	overflow: hidden;
 	background-color: var(--bg-light-color);
 }
 
 * {
 	font-family: 'Inter', sans-serif;
 	color:  var(--font-focus-color);
+}
+
+h2 {
+	margin: unset;
 }
 
 a {
