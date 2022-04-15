@@ -1,0 +1,40 @@
+
+/* GENERAL */
+
+body {
+	margin: 0;
+}
+
+/* HEADER */
+
+header {
+	background-color: #999999;
+	display: flex;
+	justify-content: space-between;
+	padding: 7px 15px;
+}
+
+	header #logo {
+		width: 200px;
+	}
+
+	header nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+		header nav a {
+			margin: 0 8px;
+		}
+
+/* FOOTER */
+
+footer {
+	display: block;
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	padding: 7px 15px;
+	background-color: grey;
+}
