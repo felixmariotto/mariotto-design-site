@@ -11,17 +11,17 @@
 	background-color: red;
 }
 
-	#index-carousel section:not(.focus) {
+	#index-carousel > section:not(.focus) {
 		display: none;
 	}
 
-	#index-carousel section {
+	#index-carousel > section {
 		position: relative;
 		height: 62vw;
 		max-height: 60vh;
 	}
 
-		#index-carousel section img {
+		#index-carousel > section > img {
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -29,8 +29,23 @@
 			object-fit: cover;
 		}
 
-		#index-carousel section h2 {
+		#index-carousel > section> div {
 			position: relative;
+			top: 40px;
+			left: 40px;
 			z-index: 1;
-			color: var(--font-on-dark);
 		}
+
+			#index-carousel > section> div > h2 {
+				color: var(--font-on-dark);
+			}
+
+			#index-carousel > section> div > button {
+				color: var(--font-on-dark);
+				border-color: var(--font-on-dark);
+			}
+
+				#index-carousel > section> div > button:hover {
+					color: var(--font-mid-color);
+					background-color: var(--font-on-dark);
+				}
