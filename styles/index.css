@@ -1,14 +1,15 @@
 
 #index-page {
 	display: flex;
-	justify-content: center;
+	flex-direction: column;
+	align-items: center;
 }
 
 /* CAROUSEL */
 
 #index-carousel {
 	position: relative;
-	width:  calc( 100vh + 25vw );
+	width: calc( 100vh + 25vw );
 }
 
 	#index-carousel-nav {
@@ -92,3 +93,18 @@
 					color: var(--font-mid-color);
 					background-color: var(--font-on-dark);
 				}
+
+/* NEWS & ARTICLES */
+
+#index-latest {
+	margin-top: 100px;
+}
+
+	#index-latest > article {
+		position: relative;
+		width: 500px;
+	}
+
+		#index-latest > article > img {
+			width: 100%;
+		}
