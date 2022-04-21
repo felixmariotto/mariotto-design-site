@@ -8,6 +8,7 @@
 	#index-page > section {
 		position: relative;
 		width: calc( 100vh + 25vw );
+		max-width: 100%;
 	}
 
 /* CAROUSEL */
@@ -112,20 +113,10 @@
 		display: grid;
 		margin-top: 30px;
 		width: 100%;
-		grid-template-columns: repeat(auto-fill, minmax(calc(160px + 20vw), 1fr));
+		grid-template-columns: repeat( auto-fill, minmax( calc(250px + 10%), 1fr ) );
 		grid-row-gap: 18px;
 		grid-column-gap: 18px;
 	}
-
-		/*
-		.grid-item {
-			background-color: rgba(255, 255, 255, 0.8);
-			border: 1px solid rgba(0, 0, 0, 0.8);
-			padding: 20px;
-			font-size: 30px;
-			text-align: center;
-		}
-		*/
 
 		#index-articles > figure {
 			position: relative;
