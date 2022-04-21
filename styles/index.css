@@ -7,9 +7,44 @@
 /* CAROUSEL */
 
 #index-carousel {
+	position: relative;
 	width:  calc( 100vh + 25vw );
-	background-color: red;
 }
+
+	#index-carousel-nav {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		width: 80%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 5px;
+		background-color: var(--bg-light-color);
+		z-index: 1;
+	}
+
+		#index-carousel-nav > button {
+			padding: 16px;
+			border: 0;
+			cursor: pointer;
+			font-weight: 600;
+			font-size: 1.1em;
+		}
+
+		#index-carousel-nav-loading {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 3px;
+			background-color: var(--font-light-color);
+		}
+
+			#index-carousel-nav-loaded {
+				height: 100%;
+				width: 50%;
+				background-color: var(--font-focus-color);
+			}
 
 	#index-carousel > section:not(.focus) {
 		display: none;
