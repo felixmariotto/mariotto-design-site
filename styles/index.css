@@ -21,7 +21,7 @@
 		justify-content: space-evenly;
 		padding: 5px;
 		background-color: var(--bg-light-color);
-		z-index: 1;
+		z-index: 2;
 	}
 
 		#index-carousel-nav > button {
@@ -65,14 +65,22 @@
 		}
 
 		#index-carousel > section> div {
-			position: relative;
-			top: 40px;
-			left: 40px;
+			position: absolute;
+			display: inline-block;
+			padding: 40px 70px 40px 40px;
+			height: 100%;
 			z-index: 1;
+			background: rgba(0,0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,0.6694387227547269) 0%, rgba(255,255,255,0) 100%);
 		}
 
 			#index-carousel > section> div > h2 {
 				color: var(--font-on-dark);
+				font-size: 3em;
+				margin-bottom: 28px;
+				cursor: pointer;
+				border-top: solid 6px var(--focus-color);
+				padding-top: 8px;
 			}
 
 			#index-carousel > section> div > button {

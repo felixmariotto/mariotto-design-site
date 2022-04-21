@@ -20,8 +20,8 @@ body {
 * {
 	font-family: 'Barlow', sans-serif;
 	font-weight: 500;
-	/* font-family: 'Inter', sans-serif; */
 	color:  var(--font-focus-color);
+	box-sizing: border-box;
 }
 
 h1 {
@@ -39,7 +39,7 @@ button {
 	border-width: 2px;
 	border-color: var(--font-focus-color);
 	border-radius: 900px;
-	padding: 5px 9px;
+	padding: 8px 12px;
 	font: inherit;
 	cursor: pointer;
 	outline: inherit;
