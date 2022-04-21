@@ -32,6 +32,10 @@ h2 {
 	margin: unset;
 }
 
+p {
+	margin: unset;
+}
+
 button {
 	background: none;
 	color: inherit;
