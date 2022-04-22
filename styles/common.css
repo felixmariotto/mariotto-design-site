@@ -90,10 +90,35 @@ header {
 /* FOOTER */
 
 footer {
-	display: block;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 	width: 100%;
 	bottom: 0;
 	margin-top: 55px;
 	padding: 25px;
 	background-color: var(--bg-dark-color);
+}
+
+	footer > a {
+		color: var(--font-light-color);
+		text-decoration-color: var(--font-light-color);
+	}
+
+		footer > a:hover {
+			text-decoration-color: var(--font-mid-color);
+		}
+
+	footer > nav *:not(first-child) {
+		margin-left: 15px;
+	}
+
+@media screen and (max-width: 620px) {
+	footer {
+		flex-direction: column-reverse;
+	}
+
+	footer > nav {
+		margin-bottom: 10px;
+	}
 }
