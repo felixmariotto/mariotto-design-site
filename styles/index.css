@@ -11,6 +11,10 @@
 		max-width: 100%;
 	}
 
+	#index-page > section:not(#index-carousel) {
+		padding: 0 calc( 18px + 3% );
+	}
+
 /* CAROUSEL */
 
 #index-carousel {}
@@ -113,7 +117,7 @@
 		display: grid;
 		margin-top: 30px;
 		width: 100%;
-		grid-template-columns: repeat( auto-fill, minmax( calc(250px + 10%), 1fr ) );
+		grid-template-columns: repeat( auto-fill, minmax( calc(220px + 8%), 1fr ) );
 		grid-row-gap: 18px;
 		grid-column-gap: 18px;
 	}
