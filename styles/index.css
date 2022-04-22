@@ -121,6 +121,7 @@
 		#index-articles > figure {
 			position: relative;
 			margin: 0;
+			cursor: pointer;
 		}
 
 			#index-articles > figure > img {

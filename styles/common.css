@@ -4,7 +4,8 @@
 :root {
 	--bg-light-color: #ffffff;
 	--bg-mid-color: #d9d9d9;
-	--focus-color: #1a5676;
+	--bg-dark-color: #777777;
+	--focus-color: #36b1f2;
 	--font-focus-color: #000000;
 	--font-mid-color: #555555;
 	--font-light-color: #bdbdbd;
@@ -93,6 +94,6 @@ footer {
 	width: 100%;
 	bottom: 0;
 	margin-top: 55px;
-	padding: 7px 15px;
-	border-top: solid var(--bg-mid-color) 1px;
+	padding: 25px;
+	background-color: var(--bg-dark-color);
 }
