@@ -36,9 +36,14 @@
 			padding: 16px;
 			border: 0;
 			cursor: pointer;
-			font-weight: 600;
-			font-size: 1.1em;
+			font-weight: 650;
+			font-size: 1.2em;
+			color: var(--font-mid-color);
 		}
+
+			#index-carousel-nav > button.focus {
+				color: var(--font-focus-color);
+			}
 
 		#index-carousel-nav-loading {
 			position: absolute;
@@ -50,7 +55,7 @@
 
 			#index-carousel-nav-loaded {
 				height: 100%;
-				width: 50%;
+				width: 0%;
 				background-color: var(--font-focus-color);
 			}
 

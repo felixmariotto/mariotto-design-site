@@ -6,8 +6,8 @@
 	--bg-mid-color: #d9d9d9;
 	--bg-dark-color: #777777;
 	--focus-color: #36b1f2;
-	--font-focus-color: #000000;
-	--font-mid-color: #555555;
+	--font-focus-color: rgb( 15, 15, 15 );
+	--font-mid-color: rgb( 105, 105, 105 );
 	--font-light-color: #bdbdbd;
 	--font-on-dark: #ffffff;
 }

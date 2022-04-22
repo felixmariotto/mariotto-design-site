@@ -129,5 +129,43 @@
         </nav>
     </footer>
 
+    <script type="text/javascript">
+
+        let percentBar = 0;
+        let counter = 0;
+        const loadingSpeed = 0.06;
+        const loadedBar = document.querySelector('#index-carousel-nav-loaded');
+        const carouselButtons = document.querySelectorAll('#index-carousel-nav button');
+        const carouselSections = document.querySelectorAll('#index-carousel section')
+
+        setInterval( () => {
+
+            percentBar = ( percentBar + loadingSpeed ) % 100;
+            counter = ( counter + 1 ) % 6;
+
+            loadedBar.style.width = percentBar + '%';
+
+            if ( counter == 1 ) {
+
+                const focusedID = Math.floor( percentBar / 33.33 );
+
+                focusedButton = carouselButtons[ focusedID ];
+                focusedSection = carouselSections[ focusedID ];
+
+                for ( let i=0 ; i<3 ; i++ ) {
+                    carouselButtons[ i ].classList.remove('focus');
+                    carouselSections[ i ].classList.remove('focus');
+                    if ( i == focusedID ) {
+                        carouselButtons[ i ].classList.add('focus');
+                        carouselSections[ i ].classList.add('focus');
+                    }
+                }
+
+            }
+
+        }, 10 );
+
+    </script>
+
 </body>
 </html>
