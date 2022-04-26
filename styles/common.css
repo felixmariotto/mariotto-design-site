@@ -54,6 +54,7 @@ a {
 	text-underline-offset: 0.15em;
 	text-decoration-thickness: 0.15em;
 	text-decoration-color: var(--font-light-color);
+	transition: all 0.2s;
 }
 
 	a:hover {

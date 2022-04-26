@@ -39,6 +39,7 @@
 			font-weight: 650;
 			font-size: 1.2em;
 			color: var(--font-mid-color);
+			transition: color 0.3s;
 		}
 
 			#index-carousel-nav > button.focus {
