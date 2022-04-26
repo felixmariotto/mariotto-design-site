@@ -16,6 +16,9 @@ body {
 	margin: 0;
 	overflow-x: hidden;
 	background-color: var(--bg-light-color);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
 }
 
 * {
@@ -59,6 +62,21 @@ a {
 
 	a:hover {
 		text-decoration-color: var(--font-mid-color);
+	}
+
+/* MAIN */
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+}
+
+	main > section {
+		position: relative;
+		width: calc( 100vh + 25vw );
+		max-width: 100%;
 	}
 
 /* HEADER */
