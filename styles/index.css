@@ -57,7 +57,12 @@
 				height: 100%;
 				width: 0%;
 				background-color: var(--font-focus-color);
+				transition: background-color 0.5s;
 			}
+
+				#index-carousel-nav-loaded.disabled {
+					background-color: var(--font-light-color);
+				}
 
 	#index-carousel > section:not(.focus) {
 		display: none;
