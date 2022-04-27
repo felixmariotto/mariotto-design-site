@@ -117,8 +117,8 @@
 		margin-top: 30px;
 		width: 100%;
 		grid-template-columns: repeat( auto-fill, minmax( calc(220px + 8%), 1fr ) );
-		grid-row-gap: 18px;
-		grid-column-gap: 18px;
+		grid-row-gap: 30px;
+		grid-column-gap: 20px;
 	}
 
 		#index-articles figure {
@@ -127,9 +127,29 @@
 			cursor: pointer;
 		}
 
-			#index-articles figure > img {
-				width: 100%;
+			#index-articles a {
+				text-decoration: none;
 			}
+
+			#index-articles figure > div {
+				position: relative;
+				width: 100%;
+				aspect-ratio: 1.62/1;
+				overflow: hidden;
+			}
+
+				#index-articles figure > div > img {
+					position: absolute;
+					width: 100%;
+					left: 50%;
+					top: 50%;
+					transform: translate(-50%, -50%);
+					transition: width 1s;
+				}
+
+					#index-articles figure:hover > div > img {
+						width: 108%;
+					}
 
 			#index-articles figure > p {
 				font-weight: 300;
