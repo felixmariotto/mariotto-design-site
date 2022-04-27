@@ -32,9 +32,9 @@
 
     <style type="text/css">
 
-        <%- include('templates/styles/common.css') %>
+        <%- include('src/styles/common.css') %>
 
-        <%- include('templates/styles/index.css') %>
+        <%- include('src/styles/index.css') %>
 
     </style>
 
@@ -50,7 +50,7 @@
         </nav>
     </header>
 
-    <%- include(`templates/partials/${ main }`) %>
+    <%- include(`src/partials/${ main }`) %>
     
     <footer>
         <a href="https://commandes.greffe-tc-paris.fr/fr/societe/7501-2022B11822-912080306-mariotto-design.html" target="_blank">
@@ -66,7 +66,7 @@
     <% if ( typeof script !== 'undefined' ) { %>
         <script>
 
-            <%- include('templates/scripts/index.js') %>
+            <%- include('src/scripts/index.js') %>
 
         </script>
     <% } %>
