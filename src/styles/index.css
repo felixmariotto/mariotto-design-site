@@ -121,23 +121,23 @@
 		grid-column-gap: 18px;
 	}
 
-		#index-articles > figure {
+		#index-articles figure {
 			position: relative;
 			margin: 0;
 			cursor: pointer;
 		}
 
-			#index-articles > figure > img {
+			#index-articles figure > img {
 				width: 100%;
 			}
 
-			#index-articles > figure > p {
+			#index-articles figure > p {
 				font-weight: 300;
 				font-size: 0.9em;
 				margin: 7px 0;
 			}
 
-			#index-articles > figure > figcaption {
+			#index-articles figure > figcaption {
 				font-weight: 500;
 				font-size: 1.3em;
 			}
