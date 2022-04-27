@@ -1,24 +1,20 @@
 {
   "name": "mariotto-design-site",
   "version": "0.0.0",
-  "description": "mariottodesign.com site",
-  "main": "app.js",
+  "description": "mariottodesign.com",
   "scripts": {
-    "start": "node app.js",
-    "heroku-postbuild": "npx webpack --config webpack.config.js --env NODE_ENV=prod",
-    "dev": "webpack-dev-server --open --env NODE_ENV=dev",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx webpack --config webpack.config.js --env NODE_ENV=prod",
-    "push-dir": "npm run build && push-dir --dir=dist --branch=gh-pages"
+    "bundle": "script.bat"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/felixmariotto/mariotto-design-site.git"
   },
-  "author": "felixmariotto@gmail.com",
-  "license": "ISC",
+  "author": "felix mariotto",
   "bugs": {
     "url": "https://github.com/felixmariotto/mariotto-design-site/issues"
   },
   "homepage": "https://github.com/felixmariotto/mariotto-design-site#readme",
+  "dependencies": {
+    "ejs": "^3.1.7"
+  }
 }
