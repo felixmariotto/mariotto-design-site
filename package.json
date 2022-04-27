@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "description": "mariottodesign.com",
   "scripts": {
-    "bundle": "script.bat"
+    "bundle": "bundler.bat"
   },
   "repository": {
     "type": "git",

@@ -31,13 +31,45 @@
     <meta property="og:type" content="website" />
 
     <style type="text/css">
+
         <%- include('templates/styles/common.css') %>
+
+        <%- include('templates/styles/index.css') %>
+
     </style>
 
 </head>
 <body>
+
+    <header id="navbar">
+        <img id="logo" src="./assets/logo.png" alt="Mariotto Design logo">
+        <nav>
+            <a href="/services">Services</a>
+            <a href="/about">About us</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <%- include(`templates/partials/${ main }`) %>
     
-    <%= title %>
+    <footer>
+        <a href="https://commandes.greffe-tc-paris.fr/fr/societe/7501-2022B11822-912080306-mariotto-design.html" target="_blank">
+            Mariotto Design - SAS immatriculée au greffe de Paris<br>
+        </a>
+        <nav>
+            <object data="./assets/linkedin-icon.svg" width="25" height="25"> </object>
+            <object data="./assets/instagram-icon.svg" width="25" height="25"> </object>
+            <object data="./assets/facebook-icon.svg" width="25" height="25"> </object>
+        </nav>
+    </footer>
+
+    <% if ( typeof script !== 'undefined' ) { %>
+        <script>
+
+            <%- include('templates/scripts/index.js') %>
+
+        </script>
+    <% } %>
 
 </body>
 </html>

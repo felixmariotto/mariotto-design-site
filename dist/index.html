@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+    <title>Mariotto Design | Jewelry CAD/CAM contractor</title>
+
+    <link rel="canonical" href="https://mariottodesign.com">
+
+    <meta name="description" content="Jewelry CAD/CAM agency. Remote contractor of high jewelry design and CAD. Paris Place Vendome. CAO haute joaillerie. High end jewellery design.">
+
+    <meta property="og:title" content="Mariotto Design - Jewelry CAD" />
+
+    <meta property="og:url" content="https://mariottodesign.com/" />
+
+    <meta property="og:description" content="jewelry and high jewellery design - CAD contractor">
+
+    <meta property="og:image" content="https://cad-portfolio.s3.eu-west-3.amazonaws.com/images/social_share.jpg">
+
+    <meta property="og:image:type" content="image/png">
+
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+
+    <meta property="og:type" content="website" />
+
+    <style type="text/css">
+
+        
+/* GENERAL */
+
+:root {
+	--bg-light-color: #ffffff;
+	--bg-mid-color: #d9d9d9;
+	--bg-dark-color: #777777;
+	--focus-color: #36b1f2;
+	--font-focus-color: rgb( 15, 15, 15 );
+	--font-mid-color: rgb( 105, 105, 105 );
+	--font-light-color: #bdbdbd;
+	--font-on-dark: #ffffff;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+	background-color: var(--bg-light-color);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+* {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 500;
+	color:  var(--font-focus-color);
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: unset;
+}
+
+h2 {
+	margin: unset;
+}
+
+p {
+	margin: unset;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--font-focus-color);
+	border-radius: 900px;
+	padding: 8px 12px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+a {
+	text-underline-offset: 0.15em;
+	text-decoration-thickness: 0.15em;
+	text-decoration-color: var(--font-light-color);
+	transition: all 0.2s;
+}
+
+	a:hover {
+		text-decoration-color: var(--font-mid-color);
+	}
+
+/* MAIN */
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+}
+
+	main > section {
+		position: relative;
+		width: calc( 100vh + 25vw );
+		max-width: 100%;
+	}
+
+/* HEADER */
+
+header {
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	padding: 15px 32px;
+	border-bottom: solid var(--bg-mid-color) 1px;
+	background-color: var(--bg-light-color);
+	z-index: 100;
+}
+
+	header #logo {
+		width: 170px;
+	}
+
+	header nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+		header nav a {
+			margin: 0 8px;
+		}
+
+/* FOOTER */
+
+footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	bottom: 0;
+	margin-top: 55px;
+	padding: 25px;
+	background-color: var(--bg-dark-color);
+}
+
+	footer > a {
+		color: var(--font-light-color);
+		text-decoration-color: var(--font-light-color);
+	}
+
+		footer > a:hover {
+			text-decoration-color: var(--font-mid-color);
+		}
+
+	footer > nav *:not(first-child) {
+		margin-left: 15px;
+	}
+
+@media screen and (max-width: 620px) {
+	footer {
+		flex-direction: column-reverse;
+	}
+
+	footer > nav {
+		margin-bottom: 10px;
+	}
+}
+
+        
+#index-page > section:not(#index-carousel) {
+	padding: 0 calc( 18px + 3% );
+}
+
+/* CAROUSEL */
+
+#index-carousel {}
+
+	#index-carousel-nav {
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 50%);
+		width: 80%;
+		display: flex;
+		justify-content: space-evenly;
+		padding: 5px;
+		background-color: var(--bg-light-color);
+		z-index: 2;
+	}
+
+		#index-carousel-nav > button {
+			padding: 16px;
+			border: 0;
+			cursor: pointer;
+			font-weight: 650;
+			font-size: 1.2em;
+			color: var(--font-mid-color);
+			transition: color 0.3s;
+		}
+
+			#index-carousel-nav > button.focus {
+				color: var(--font-focus-color);
+			}
+
+		#index-carousel-nav-loading {
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+			height: 3px;
+			background-color: var(--font-light-color);
+		}
+
+			#index-carousel-nav-loaded {
+				height: 100%;
+				width: 0%;
+				background-color: var(--font-focus-color);
+				transition: background-color 0.5s;
+			}
+
+				#index-carousel-nav-loaded.disabled {
+					background-color: var(--font-light-color);
+				}
+
+	#index-carousel > section:not(.focus) {
+		display: none;
+	}
+
+	#index-carousel > section {
+		position: relative;
+		height: 62vw;
+		max-height: 60vh;
+	}
+
+		#index-carousel > section > img {
+			position: absolute;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+
+		#index-carousel > section> div {
+			position: absolute;
+			display: inline-block;
+			padding: 40px 70px 40px 40px;
+			height: 100%;
+			z-index: 1;
+			background: rgba(0,0,0,0);
+			background: linear-gradient(90deg, rgba(0,0,0,0.6694387227547269) 0%, rgba(255,255,255,0) 100%);
+		}
+
+			#index-carousel > section> div > h2 {
+				color: var(--font-on-dark);
+				font-size: 3em;
+				margin-bottom: 28px;
+				cursor: pointer;
+				border-top: solid 6px var(--focus-color);
+				padding-top: 8px;
+			}
+
+			#index-carousel > section> div > button {
+				color: var(--font-on-dark);
+				border-color: var(--font-on-dark);
+			}
+
+				#index-carousel > section> div > button:hover {
+					color: var(--font-mid-color);
+					background-color: var(--font-on-dark);
+				}
+
+/* NEWS & ARTICLES */
+
+#index-latest {
+	margin-top: 120px;
+}
+
+	#index-latest > h1 {
+		display: inline-block;
+		border-top: solid 6px var(--focus-color);
+		padding-top: 8px;
+	}
+
+	#index-articles {
+		display: grid;
+		margin-top: 30px;
+		width: 100%;
+		grid-template-columns: repeat( auto-fill, minmax( calc(220px + 8%), 1fr ) );
+		grid-row-gap: 18px;
+		grid-column-gap: 18px;
+	}
+
+		#index-articles > figure {
+			position: relative;
+			margin: 0;
+			cursor: pointer;
+		}
+
+			#index-articles > figure > img {
+				width: 100%;
+			}
+
+			#index-articles > figure > p {
+				font-weight: 300;
+				font-size: 0.9em;
+				margin: 7px 0;
+			}
+
+			#index-articles > figure > figcaption {
+				font-weight: 500;
+				font-size: 1.3em;
+			}
+
+    </style>
+
+</head>
+<body>
+
+    <header id="navbar">
+        <img id="logo" src="./assets/logo.png" alt="Mariotto Design logo">
+        <nav>
+            <a href="/services">Services</a>
+            <a href="/about">About us</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <main id="index-page">
+
+    <section id="index-carousel">
+
+        <nav id="index-carousel-nav">
+            <button class="focus">
+                CAD/CAM services
+            </button>
+            <button>
+                Rendering
+            </button>
+            <button>
+                Innovations
+            </button>
+            <div id="index-carousel-nav-loading">
+                <div id="index-carousel-nav-loaded"></div>
+            </div>
+        </nav>
+
+        <section class="focus">
+            <div>
+                <h2>CAD/CAM services<br>for top jewelers</h2>
+                <button>Discover more</button>
+            </div>
+            <img src="./assets/mariotto-design-background.jpg">
+        </section>
+        <section>
+            <div>
+                <h2>Photorealistic rendering</h2>
+                <button>Discover more</button>
+            </div>
+            <img src="./assets/mariotto-design-background.jpg">
+        </section>
+        <section>
+            <div>
+                <h2>Innovative solutions</h2>
+                <button>Discover more</button>
+            </div>
+            <img src="./assets/mariotto-design-background.jpg">
+        </section>
+
+    </section>
+
+    <section id="index-latest">
+        <h1>Latest News & Articles</h1>
+        <div id="index-articles">
+            <figure>
+                <img src="./assets/mariotto-design-background.jpg">
+                <p>April 21, 2022</p>
+                <figcaption>Example article</figcaption>
+            </figure>
+            <figure>
+                <img src="./assets/mariotto-design-background.jpg">
+                <p>April 21, 2022</p>
+                <figcaption>Example article</figcaption>
+            </figure>
+            <figure>
+                <img src="./assets/mariotto-design-background.jpg">
+                <p>April 21, 2022</p>
+                <figcaption>Example article</figcaption>
+            </figure>
+        </div>
+    </section>
+
+</main>
+    
+    <footer>
+        <a href="https://commandes.greffe-tc-paris.fr/fr/societe/7501-2022B11822-912080306-mariotto-design.html" target="_blank">
+            Mariotto Design - SAS immatriculée au greffe de Paris<br>
+        </a>
+        <nav>
+            <object data="./assets/linkedin-icon.svg" width="25" height="25"> </object>
+            <object data="./assets/instagram-icon.svg" width="25" height="25"> </object>
+            <object data="./assets/facebook-icon.svg" width="25" height="25"> </object>
+        </nav>
+    </footer>
+
+    
+        <script>
+
+            let percentBar = 0;
+let counter = 0;
+let animationEnabled = true;
+const loadingSpeed = 0.06;
+const loadedBar = document.querySelector('#index-carousel-nav-loaded');
+const carouselNav = document.querySelector('#index-carousel-nav');
+const carouselButtons = document.querySelectorAll('#index-carousel-nav button');
+const carouselSections = document.querySelectorAll('#index-carousel section')
+
+for ( let i=0 ; i<3 ; i++ ) {
+
+    const button = carouselButtons[ i ];
+
+    button.addEventListener( 'mouseover', () => {
+
+        animationEnabled = false;
+        
+        setFocusOn( i );
+
+        loadedBar.classList.add( 'disabled' );
+
+    } );
+
+    button.addEventListener( 'mouseleave', () => {
+
+        animationEnabled = true;
+
+        loadedBar.classList.remove( 'disabled' );
+
+    } );
+
+};
+
+setInterval( () => {
+
+    if ( !animationEnabled ) return
+
+    percentBar = ( percentBar + loadingSpeed ) % 100;
+    counter = ( counter + 1 ) % 6;
+
+    loadedBar.style.width = percentBar + '%';
+
+    if ( counter == 1 ) {
+
+        const focusedID = Math.floor( percentBar / 33.33 );
+
+        setFocusOn( focusedID )
+
+    }
+
+}, 10 );
+
+function setFocusOn( id ) {
+
+    for ( let i=0 ; i<3 ; i++ ) {
+        carouselButtons[ i ].classList.remove('focus');
+        carouselSections[ i ].classList.remove('focus');
+        if ( i == id ) {
+            carouselButtons[ i ].classList.add('focus');
+            carouselSections[ i ].classList.add('focus');
+        }
+    }
+
+}
+
+        </script>
+    
+
+</body>
+</html>

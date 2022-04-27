@@ -1,0 +1,18 @@
+.page-404 section {
+    width: auto;
+    padding: 20px 0;
+}
+
+    .page-404 section > * {
+        padding: 10px 0;
+    }
+
+.page-404 h1 {
+    font-size: 4em;
+    font-weight: 600;
+}
+
+.page-404 h2 {
+    font-size: 1.2em;
+    font-weight: 400;
+}
