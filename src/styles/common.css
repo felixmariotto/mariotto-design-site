@@ -144,16 +144,15 @@ body > footer {
 
 /* ARTICLE LAYOUT */
 
-.basic-article > div {
+.basic-article {
 	position: relative;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
 	max-width: 92%;
+	left: 50%;
+	transform: translateX( -50% );
 }
 
 @media screen and (max-width: 620px) {
-	.basic-article > div {
+	.basic-article {
 		max-width: 100%;
 	}
 }
