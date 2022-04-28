@@ -81,7 +81,7 @@ main {
 
 /* HEADER */
 
-header {
+body > header {
 	position: sticky;
 	display: flex;
 	justify-content: space-between;
@@ -92,23 +92,23 @@ header {
 	z-index: 100;
 }
 
-	header #logo {
+	body > header #logo {
 		width: 170px;
 	}
 
-	header nav {
+	body > header nav {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 	}
 
-		header nav a {
+		body > header nav a {
 			margin: 0 8px;
 		}
 
 /* FOOTER */
 
-footer {
+body > footer {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -119,25 +119,74 @@ footer {
 	background-color: var(--bg-dark-color);
 }
 
-	footer > a {
+	body > footer > a {
 		color: var(--font-light-color);
 		text-decoration-color: var(--font-light-color);
 	}
 
-		footer > a:hover {
+		body > footer > a:hover {
 			text-decoration-color: var(--font-mid-color);
 		}
 
-	footer > nav *:not(first-child) {
+	body > footer > nav *:not(first-child) {
 		margin-left: 15px;
 	}
 
 @media screen and (max-width: 620px) {
-	footer {
+	body > footer {
 		flex-direction: column-reverse;
 	}
 
-	footer > nav {
+	body > footer > nav {
 		margin-bottom: 10px;
 	}
 }
+
+/* ARTICLE LAYOUT */
+
+.basic-article > div {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 92%;
+}
+
+@media screen and (max-width: 620px) {
+	.basic-article > div {
+		max-width: 100%;
+	}
+}
+
+	.basic-article header {
+		position: relative;
+		width: calc( 100vh + 25vw );
+		max-width: 100%;
+		max-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+		.basic-article header img {
+			width: 100%;
+			object-fit: cover;
+		}
+
+	.basic-article article {
+		position: absolute;
+		bottom: 15%;
+		width: calc( 90vh + 10vw );
+		max-width: calc( 89% - 15px );
+		background-color: var( --bg-light-color );
+		transform: translateY( 100% );
+		padding: 30px calc( 5px + 3% );
+	}
+
+	@media screen and (max-width: 620px) {
+		.basic-article article {
+			bottom: 0;
+			padding: 30px 0;
+		}
+	}
