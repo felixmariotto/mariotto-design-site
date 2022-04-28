@@ -218,16 +218,18 @@ body > footer {
 	background-color: var(--bg-dark-color);
 }
 
-	body > footer > a {
-		color: var(--font-light-color);
+	body > footer > nav a {
+		color: var(--bg-light-color);
+		font-weight: 400;
 		text-decoration-color: var(--font-light-color);
+		text-decoration-thickness: 1px;
 	}
 
-		body > footer > a:hover {
+		body > footer > nav a:hover {
 			text-decoration-color: var(--font-mid-color);
 		}
 
-	body > footer > nav *:not(first-child) {
+	body > footer > #footer-nav-social *:not(first-child) {
 		margin-left: 15px;
 	}
 
@@ -236,7 +238,7 @@ body > footer {
 		flex-direction: column-reverse;
 	}
 
-	body > footer > nav {
+	body > footer > #footer-nav-social {
 		margin-bottom: 10px;
 	}
 }
