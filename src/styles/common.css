@@ -38,6 +38,9 @@ h2 {
 
 p {
 	margin: unset;
+	line-height: 1.35em;
+	font-size: 1.07em;
+	font-weight: 400;
 }
 
 button {
@@ -193,12 +196,30 @@ body > footer {
 
 		.basic-article article h1 {
 			display: inline-block;
-			font-size: 2em;
+			font-size: 3.5em;
 			font-weight: 600;
 			border-top: solid 6px var(--focus-color);
 			padding-top: 8px;
 			padding-bottom: 5px;
 		}
+
+		.basic-article article h2 {
+			position: relative;
+			display: inline-block;
+			font-size: 1.6em;
+			font-weight: 600;
+			padding-top: 10px;
+			padding-bottom: 2px;
+		}
+
+			.basic-article article h2:after {
+				content: "";
+				position: absolute;
+				width: 32px;
+				left: 0;
+				top: 0;
+				border-top: solid 4px var(--focus-color);
+			}
 
 		.basic-article article aside {
 			font-size: 0.9em;
@@ -206,5 +227,9 @@ body > footer {
 		}
 
 		.basic-article article p {
-			padding-top: 30px;
+			padding-top: 23px;
+		}
+
+		.basic-article article p:not(:last-child) {
+			padding-bottom: 50px;
 		}
