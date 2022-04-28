@@ -317,6 +317,18 @@ body > footer {
 				border-top: solid 4px var(--focus-color);
 			}
 
+		@media screen and (max-width: 800px) {
+
+			.basic-article article h1 {
+				font-size: 2em;
+			}
+
+			.basic-article article h2 {
+				font-size: 1.3em;
+			}
+
+		}
+
 		.basic-article article aside {
 			font-size: 0.95em;
 			font-weight: 400;
