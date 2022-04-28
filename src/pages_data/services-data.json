@@ -1,3 +1,4 @@
 {
-	"main": "services-main.html"
+	"main": "services-main.html",
+	"style": "services.css"
 }

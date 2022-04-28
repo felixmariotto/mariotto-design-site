@@ -34,7 +34,11 @@
 
         <%- include('src/styles/common.css') %>
 
-        <%- include('src/styles/index.css') %>
+        <% if ( typeof style !== 'undefined') { %>
+
+            <%- include(`src/styles/${ style }`) %>
+
+        <% } %>
 
     </style>
 
@@ -68,7 +72,7 @@
     <% if ( typeof script !== 'undefined' ) { %>
         <script>
 
-            <%- include('src/scripts/index.js') %>
+            <%- include(`src/scripts/${ script }`) %>
 
         </script>
     <% } %>

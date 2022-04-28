@@ -1,6 +1,7 @@
 {
   "main": "index-main.html",
   "script": "index.js",
+  "style": "index.css",
   "maxArticles": 3,
   "articles": {
     "collab-lagarde": {
