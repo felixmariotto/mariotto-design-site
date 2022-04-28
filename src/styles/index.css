@@ -22,6 +22,7 @@
 	}
 
 		@media screen and (max-width: 700px) {
+
 			#index-carousel-nav > button {
 				font-size: 1.1em;
 			}
@@ -38,6 +39,7 @@
 				width: calc( 97% - 5px );
 				transform: translate(-50%, 80%);
 			}
+
 		}
 
 		#index-carousel-nav > button {
@@ -49,6 +51,11 @@
 			color: var(--font-mid-color);
 			transition: color 0.3s;
 		}
+
+			#index-carousel-nav > button span {
+				font-weight: 650;
+				color: var(--font-mid-color);
+			}
 
 			#index-carousel-nav > button.focus {
 				color: var(--font-focus-color);
