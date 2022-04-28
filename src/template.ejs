@@ -54,10 +54,24 @@
             <a href="/about">About us</a>
             <a href="/contact">Contact</a>
         </nav>
-        <button>
-            <object data="/assets/bars-icon.svg" width="22" height="22"> </object>
+        <button onclick="hello()">
+            <object class="a" data="/assets/bars-icon.svg" width="22" height="22"> </object>
+            <object class="b" data="/assets/cross-icon.svg" width="22" height="22"> </object>
         </button>
     </header>
+
+    <script type="text/javascript">
+        let dropdownEnabled = false;
+        const navbar = document.querySelector("#navbar");
+        function hello() {
+            dropdownEnabled = !dropdownEnabled;
+            if ( dropdownEnabled ) {
+                navbar.classList.add('expanded');
+            } else {
+                navbar.classList.remove('expanded');
+            }
+        }
+    </script>
 
     <%- include(`src/partials/${ main }`) %>
     

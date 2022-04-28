@@ -60,7 +60,10 @@ a {
 	text-underline-offset: 0.15em;
 	text-decoration-thickness: 0.15em;
 	text-decoration-color: var(--font-light-color);
-	transition: all 0.2s;
+	transition:
+		text-decoration-color 0.2s,
+		color 0.2s,
+		background-color 0.2s;
 }
 
 	a:hover {
@@ -110,10 +113,45 @@ body > header {
 		}
 
 	body > header > button {
+		position: relative;
+		width: 50px;
+		padding: 0;
+		margin-right: -13px;
 		display: none;
 		border: none;
-		padding: 0;
 	}
+
+		body > header > button * {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			pointer-events: none;
+			transition: all 0.2s;
+			left: 50%;
+			top: 50%;
+		}
+
+		body > header > button .a {
+			transform:
+				scale(1.0)
+				translate( -50%, -50% );
+		}
+		body > header > button .b {
+			transform:
+				scale(0.0)
+				translate( -50%, -50% );
+		}
+
+		body > header.expanded > button .a {
+			transform:
+				scale(0.0)
+				translate( -50%, -50% );
+		}
+		body > header.expanded > button .b {
+			transform:
+				scale(1.0)
+				translate( -50%, -50% );
+		}
 
 	@media screen and (max-width: 750px) {
 		body > header #logo {
@@ -121,6 +159,10 @@ body > header {
 		}
 
 		body > header nav {
+			display: none;
+		}
+
+		body > header.expanded nav {
 			display: block;
 			position: absolute;
 			bottom: 0;
@@ -133,7 +175,7 @@ body > header {
 			border-bottom: solid var(--bg-mid-color) 1px;
 		}
 
-			body > header nav a {
+			body > header.expanded nav a {
 				position: relative;
 				display: flex;
 				justify-content: space-between;
@@ -141,11 +183,11 @@ body > header {
 				padding: 10px;
 			}
 
-				body > header nav a:not(:first-child) {
+				body > header.expanded nav a:not(:first-child) {
 					border-top: solid var(--bg-mid-color) 1px;
 				}
 
-				body > header nav a:after {
+				body > header.expanded nav a:after {
 					content: 'V';
 					font-family: Arial;
 					font-size: 0.8em;
@@ -154,12 +196,12 @@ body > header {
 					top: 0;
 				}
 
-				body > header nav a:hover {
+				body > header.expanded nav a:hover {
 					background-color: var(--bg-mid-color);
 				}
 
 		body > header > button {
-			display: unset;
+			display: flex;
 		}
 	}
 
