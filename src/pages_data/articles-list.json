@@ -1,0 +1,22 @@
+{
+
+	"collab-lagarde": {
+		"date": 1650528625000,
+		"thumbnail": "/assets/collab-lagarde-min.jpg",
+		"thumbnail-alt": "photorealistic render of earrings",
+		"caption": "Collaboration with Estelle Lagarde"
+	},
+	"rh-aw-pav": {
+		"date": 1650528625000,
+		"thumbnail": "/assets/rh-aw-pav-min.jpg",
+		"thumbnail-alt": "software development in Rhino",
+		"caption": "Pilot experiment: pave setting addon for Rhino"
+	},
+	"gemviewr": {
+		"date": 1650528625000,
+		"thumbnail": "/assets/gemviewr-min.jpg",
+		"thumbnail-alt": "realtime render of a tiara",
+		"caption": "Gemviewr: a free in-browser jewelry viewer developped by Mariotto Design"
+	}
+
+}
