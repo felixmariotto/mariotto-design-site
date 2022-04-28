@@ -18,7 +18,27 @@
 		padding: 5px;
 		background-color: var(--bg-light-color);
 		z-index: 2;
+		overflow: hidden;
 	}
+
+		@media screen and (max-width: 700px) {
+			#index-carousel-nav > button {
+				font-size: 1.1em;
+			}
+
+			#index-carousel-nav button:first-child span {
+				display: none;
+			}
+
+			#index-carousel-nav button:first-child:after {
+				content: "CAD";
+			}
+
+			#index-carousel-nav {
+				width: calc( 97% - 5px );
+				transform: translate(-50%, 80%);
+			}
+		}
 
 		#index-carousel-nav > button {
 			padding: 16px;
