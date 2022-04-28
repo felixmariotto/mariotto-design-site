@@ -222,8 +222,9 @@ body > footer {
 			}
 
 		.basic-article article aside {
-			font-size: 0.9em;
+			font-size: 0.95em;
 			font-weight: 400;
+			color:  var(--font-mid-color);
 		}
 
 		.basic-article article p {
@@ -233,3 +234,23 @@ body > footer {
 		.basic-article article p:not(:last-child) {
 			padding-bottom: 50px;
 		}
+
+		.basic-article article figure {
+			position: relative;
+			width: 100%;
+			margin: 0;
+			padding: 25px 0;
+			border-bottom: 1px solid var(--font-light-color);
+		}
+
+			.basic-article article img {
+				width: 100%;
+				object-fit: cover;
+			}
+
+			.basic-article article figcaption {
+				padding-top: 4px;
+				font-size: 0.95em;
+				font-weight: 400;
+				color: var(--font-mid-color);
+			}
