@@ -109,6 +109,60 @@ body > header {
 			margin: 0 8px;
 		}
 
+	body > header > button {
+		display: none;
+		border: none;
+		padding: 0;
+	}
+
+	@media screen and (max-width: 750px) {
+		body > header #logo {
+			width: 130px;
+		}
+
+		body > header nav {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 10px 15px;
+			transform: translateY(100%);
+			background-color: var(--bg-light-color);
+			border-top: solid var(--bg-mid-color) 1px;
+			border-bottom: solid var(--bg-mid-color) 1px;
+		}
+
+			body > header nav a {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				text-decoration: none;
+				padding: 10px;
+			}
+
+				body > header nav a:not(:first-child) {
+					border-top: solid var(--bg-mid-color) 1px;
+				}
+
+				body > header nav a:after {
+					content: 'V';
+					font-family: Arial;
+					font-size: 0.8em;
+					transform: rotate(-90deg);
+					right: 0;
+					top: 0;
+				}
+
+				body > header nav a:hover {
+					background-color: var(--bg-mid-color);
+				}
+
+		body > header > button {
+			display: unset;
+		}
+	}
+
 /* FOOTER */
 
 body > footer {
