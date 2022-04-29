@@ -4,7 +4,7 @@
 :root {
 	--bg-light-color: #ffffff;
 	--bg-mid-color: #d9d9d9;
-	--bg-dark-color: #777777;
+	--bg-dark-color: #545454;
 	--focus-color: #36b1f2;
 	--font-focus-color: rgb( 15, 15, 15 );
 	--font-mid-color: rgb( 105, 105, 105 );
@@ -223,6 +223,7 @@ body > footer {
 		font-weight: 400;
 		text-decoration-color: var(--font-light-color);
 		text-decoration-thickness: 1px;
+		padding: 5px 0;
 	}
 
 		body > footer > nav a:hover {
@@ -233,10 +234,6 @@ body > footer {
 		display: flex;
 		flex-direction: column;
 	}
-
-		body > footer > #footer-nav-misc *:not(:first-child) {
-			padding-top: 10px;
-		}
 
 		body > footer > #footer-nav-social *:not(:first-child) {
 			margin-left: 15px;
@@ -362,7 +359,9 @@ body > footer {
 			border-bottom: 1px solid var(--font-light-color);
 		}
 
-			.basic-article article img {
+			.basic-article article img,
+			.basic-article article video
+			{
 				width: 100%;
 				object-fit: cover;
 			}
