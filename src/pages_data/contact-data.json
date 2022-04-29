@@ -1,3 +1,4 @@
 {
-	"main": "contact-main.html"
+	"main": "contact-main.html",
+	"style": "contact.css"
 }
