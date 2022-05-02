@@ -4,7 +4,6 @@ let animationEnabled = true;
 let playedVideo = null;
 const loadingSpeed = 0.037;
 const loadedBar = document.querySelector('#index-carousel-nav-loaded');
-const carouselNav = document.querySelector('#index-carousel-nav');
 const carouselButtons = document.querySelectorAll('#index-carousel-nav button');
 const carouselSections = document.querySelectorAll('#index-carousel section')
 
@@ -55,7 +54,7 @@ function setFocusOn( id ) {
 
     if ( id !== playedVideo ) {
         // reset the video
-        const video = carouselSections[ id ].children[ 1 ];
+        const video = carouselSections[ id ].querySelector('video');
         video.pause();
         video.currentTime = 0;
         video.play();

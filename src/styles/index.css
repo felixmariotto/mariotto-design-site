@@ -55,9 +55,11 @@
 			#index-carousel-nav > button span {
 				font-weight: 650;
 				color: var(--font-mid-color);
+				pointer-events: none;
 			}
 
-			#index-carousel-nav > button.focus {
+			#index-carousel-nav > button.focus,
+			#index-carousel-nav > button.focus span {
 				color: var(--font-focus-color);
 			}
 
@@ -85,6 +87,7 @@
 	}
 
 	#index-carousel > section {
+		display: flex;
 		position: relative;
 		height: 62vw;
 		max-height: 60vh;
@@ -99,14 +102,19 @@
 			object-fit: cover;
 		}
 
-		#index-carousel > section > div {
-			position: absolute;
+		#index-carousel > section > .overlay {
+			flex-grow: 1;
+			background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0) 100%);
+			position: relative;
+			z-index: 1;
+		}
+
+		#index-carousel > section > div:not(.overlay) {
 			display: inline-block;
-			padding: 40px 70px 40px 40px;
+			padding: 40px 40px 40px 40px;
 			height: 100%;
 			z-index: 1;
-			background: rgba(0,0,0,0);
-			background: linear-gradient(90deg, rgba(0,0,0,0.6694387227547269) 0%, rgba(255,255,255,0) 100%);
+			background-color: rgba(0,0,0,0.8);
 		}
 
 			#index-carousel > section > div > h2 {
