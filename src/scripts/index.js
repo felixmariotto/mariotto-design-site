@@ -6,26 +6,35 @@ const loadingSpeed = 0.037;
 const loadedBar = document.querySelector('#index-carousel-nav-loaded');
 const carouselButtons = document.querySelectorAll('#index-carousel-nav button');
 const carouselSections = document.querySelectorAll('#index-carousel section')
+const indexCarousel = document.querySelector('#index-carousel');
+
+indexCarousel.addEventListener('mouseover', () => {
+
+    animationEnabled = false;
+
+    loadedBar.classList.add( 'disabled' );
+
+} );
+
+indexCarousel.addEventListener('mouseleave', () => {
+
+    animationEnabled = true;
+
+    loadedBar.classList.remove( 'disabled' );
+
+} );
 
 for ( let i=0 ; i<3 ; i++ ) {
 
     const button = carouselButtons[ i ];
 
-    button.addEventListener( 'mouseover', () => {
+    button.addEventListener( 'click', () => {
 
-        animationEnabled = false;
+        // set loading bar at the level of the clicked button,
+        // so the animation is resumed from the clicked button.
+        percentBar = ( 100 / 3 ) * i;
         
         setFocusOn( i );
-
-        loadedBar.classList.add( 'disabled' );
-
-    } );
-
-    button.addEventListener( 'mouseleave', () => {
-
-        animationEnabled = true;
-
-        loadedBar.classList.remove( 'disabled' );
 
     } );
 
