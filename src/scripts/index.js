@@ -1,7 +1,8 @@
 let percentBar = 0;
 let counter = 0;
 let animationEnabled = true;
-const loadingSpeed = 0.06;
+let playedVideo = null;
+const loadingSpeed = 0.037;
 const loadedBar = document.querySelector('#index-carousel-nav-loaded');
 const carouselNav = document.querySelector('#index-carousel-nav');
 const carouselButtons = document.querySelectorAll('#index-carousel-nav button');
@@ -42,7 +43,7 @@ setInterval( () => {
 
     if ( counter == 1 ) {
 
-        const focusedID = Math.floor( percentBar / 33.33 );
+        const focusedID = Math.floor( percentBar / 33.33 ) % 3;
 
         setFocusOn( focusedID )
 
@@ -51,6 +52,15 @@ setInterval( () => {
 }, 10 );
 
 function setFocusOn( id ) {
+
+    if ( id !== playedVideo ) {
+        // reset the video
+        const video = carouselSections[ id ].children[ 1 ];
+        video.pause();
+        video.currentTime = 0;
+        video.play();
+        playedVideo = id;
+    }
 
     for ( let i=0 ; i<3 ; i++ ) {
         carouselButtons[ i ].classList.remove('focus');
