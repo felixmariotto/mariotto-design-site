@@ -109,15 +109,16 @@
 			z-index: 1;
 		}
 
-		#index-carousel > section > div:not(.overlay) {
+		#index-carousel > section > a {
 			display: inline-block;
 			padding: 40px 40px 40px 40px;
 			height: 100%;
 			z-index: 1;
 			background-color: rgba(0,0,0,0.8);
+			text-decoration: none;
 		}
 
-			#index-carousel > section > div > h2 {
+			#index-carousel > section > a > h2 {
 				color: var(--font-on-dark);
 				font-size: 3em;
 				margin-bottom: 28px;
@@ -126,22 +127,22 @@
 				padding-top: 8px;
 			}
 
-			#index-carousel > section > div > button {
+			#index-carousel > section > a > button {
 				color: var(--font-on-dark);
 				border-color: var(--font-on-dark);
 			}
 
-				#index-carousel > section > div > button:hover {
+				#index-carousel > section > a > button:hover {
 					color: var(--font-mid-color);
 					background-color: var(--font-on-dark);
 				}
 
 			@media screen and (max-width: 800px) {
-				#index-carousel > section > div > button {
+				#index-carousel > section > a > button {
 					display: none;
 				}
 
-				#index-carousel > section > div > h2 {
+				#index-carousel > section > a > h2 {
 					font-size: 2em;
 				}
 			}
