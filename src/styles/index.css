@@ -90,7 +90,8 @@
 		max-height: 60vh;
 	}
 
-		#index-carousel > section > img {
+		#index-carousel > section > img,
+		#index-carousel > section > video{
 			position: absolute;
 			top: 0;
 			width: 100%;
