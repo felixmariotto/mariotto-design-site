@@ -275,7 +275,9 @@ body > footer {
 		overflow: hidden;
 	}
 
-		.basic-article header img {
+		.basic-article header img,
+		.basic-article header video
+		{
 			width: 100%;
 			object-fit: cover;
 		}
