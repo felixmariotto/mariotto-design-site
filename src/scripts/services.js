@@ -24,21 +24,3 @@ Array.from( videoElements ).forEach( ( videoElement, i ) => {
 	});
 
 } );
-
-/*
-const videoURLs = [
-	"/assets/cad-service-teaser.mp4", 
-	"/assets/rendering-service-teaser.mp4",
-	"/assets/innovation-service-teaser.mp4"
-];
-
-let activeVideo = 0;
-
-videoElement.addEventListener( 'ended', e => {
-	// update the new active video index
-	activeVideo = ( activeVideo + 1 ) % videoURLs.length;
-
-	// update the video source and play
-	videoElement.src = videoURLs[ activeVideo ];
-});
-*/
