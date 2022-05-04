@@ -325,6 +325,11 @@ body > footer {
 				border-top: solid 4px var(--focus-color);
 			}
 
+			.basic-article article h2 span {
+				position: absolute;
+				top: -100px;
+			}
+
 		@media screen and (max-width: 800px) {
 
 			.basic-article article h1 {
