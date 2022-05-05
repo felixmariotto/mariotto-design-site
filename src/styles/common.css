@@ -276,8 +276,7 @@ body > footer {
 	}
 
 		.basic-article header img,
-		.basic-article header video
-		{
+		.basic-article header video {
 			width: 100%;
 			object-fit: cover;
 		}
@@ -379,3 +378,20 @@ body > footer {
 				font-weight: 400;
 				color: var(--font-mid-color);
 			}
+
+			.basic-article article .container {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+			}
+
+				.basic-article article .container iframe {
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+				}
