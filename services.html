@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <link rel="icon" type="image/png" href="/assets/md-icon.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/md-icon.png" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+
+    <title>Mariotto Design | Jewelry CAD/CAM contractor</title>
+
+    <link rel="canonical" href="https://mariottodesign.com">
+
+    <meta name="description" content="Jewelry CAD/CAM agency. Remote contractor of high jewelry design and CAD. Paris Place Vendome. CAO haute joaillerie. High end jewellery design.">
+
+    <meta property="og:title" content="Mariotto Design - Jewelry CAD" />
+
+    <meta property="og:url" content="https://mariottodesign.com/" />
+
+    <meta property="og:description" content="jewelry and high jewellery design - CAD contractor">
+
+    <meta property="og:image" content="https://cad-portfolio.s3.eu-west-3.amazonaws.com/images/social_share.jpg">
+
+    <meta property="og:image:type" content="image/jpg">
+
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+
+    <meta property="og:type" content="website" />
+
+    <style type="text/css">
+
+        
+/* GENERAL */
+
+:root {
+	--bg-light-color: #ffffff;
+	--bg-mid-color: #d9d9d9;
+	--bg-dark-color: #545454;
+	--focus-color: #36b1f2;
+	--font-focus-color: rgb( 15, 15, 15 );
+	--font-mid-color: rgb( 105, 105, 105 );
+	--font-light-color: #bdbdbd;
+	--font-on-dark: #ffffff;
+}
+
+body {
+	margin: 0;
+	overflow-x: hidden;
+	background-color: var(--bg-light-color);
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+* {
+	font-family: 'Barlow', sans-serif;
+	font-weight: 500;
+	color:  var(--font-focus-color);
+	box-sizing: border-box;
+}
+
+h1 {
+	margin: unset;
+}
+
+h2 {
+	margin: unset;
+}
+
+p {
+	margin: unset;
+	line-height: 1.35em;
+	font-size: 1.07em;
+	font-weight: 400;
+}
+
+button {
+	background: none;
+	color: inherit;
+	border-style: solid;
+	border-width: 2px;
+	border-color: var(--font-focus-color);
+	border-radius: 900px;
+	padding: 8px 12px;
+	font: inherit;
+	cursor: pointer;
+	outline: inherit;
+}
+
+a {
+	text-underline-offset: 0.15em;
+	text-decoration-thickness: 0.15em;
+	text-decoration-color: var(--font-light-color);
+	transition:
+		text-decoration-color 0.2s,
+		color 0.2s,
+		background-color 0.2s;
+}
+
+	a:hover {
+		text-decoration-color: var(--font-mid-color);
+	}
+
+/* MAIN */
+
+main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-grow: 1;
+}
+
+	main > section {
+		position: relative;
+		width: calc( 100vh + 25vw );
+		max-width: 100%;
+	}
+
+/* HEADER */
+
+body > header {
+	position: sticky;
+	display: flex;
+	justify-content: space-between;
+	top: 0;
+	padding: 15px 32px;
+	border-bottom: solid var(--bg-mid-color) 1px;
+	background-color: var(--bg-light-color);
+	z-index: 100;
+}
+
+	body > header #logo {
+		width: 170px;
+	}
+
+	body > header nav {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+		body > header nav a {
+			margin: 0 8px;
+		}
+
+	body > header > button {
+		position: relative;
+		width: 50px;
+		padding: 0;
+		margin-right: -13px;
+		display: none;
+		border: none;
+	}
+
+		body > header > button * {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			pointer-events: none;
+			transition: all 0.2s;
+			left: 50%;
+			top: 50%;
+		}
+
+		body > header > button .a {
+			transform:
+				scale(1.0)
+				translate( -50%, -50% );
+		}
+		body > header > button .b {
+			transform:
+				scale(0.0)
+				translate( -50%, -50% );
+		}
+
+		body > header.expanded > button .a {
+			transform:
+				scale(0.0)
+				translate( -50%, -50% );
+		}
+		body > header.expanded > button .b {
+			transform:
+				scale(1.0)
+				translate( -50%, -50% );
+		}
+
+	@media screen and (max-width: 750px) {
+		body > header #logo {
+			width: 130px;
+		}
+
+		body > header nav {
+			display: none;
+		}
+
+		body > header.expanded nav {
+			display: block;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			padding: 10px 15px;
+			transform: translateY(100%);
+			background-color: var(--bg-light-color);
+			border-top: solid var(--bg-mid-color) 1px;
+			border-bottom: solid var(--bg-mid-color) 1px;
+		}
+
+			body > header.expanded nav a {
+				position: relative;
+				display: flex;
+				justify-content: space-between;
+				text-decoration: none;
+				padding: 10px;
+			}
+
+				body > header.expanded nav a:not(:first-child) {
+					border-top: solid var(--bg-mid-color) 1px;
+				}
+
+				body > header.expanded nav a:after {
+					content: 'V';
+					font-family: Arial;
+					font-size: 0.8em;
+					transform: rotate(-90deg);
+					right: 0;
+					top: 0;
+				}
+
+				body > header.expanded nav a:hover {
+					background-color: var(--bg-mid-color);
+				}
+
+		body > header > button {
+			display: flex;
+		}
+	}
+
+/* FOOTER */
+
+body > footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	bottom: 0;
+	margin-top: 55px;
+	padding: 25px;
+	background-color: var(--bg-dark-color);
+}
+
+	body > footer > #footer-nav-misc {
+		display: flex;
+		flex-direction: column;
+	}
+
+		body > footer > #footer-nav-misc > a {
+			color: var(--bg-light-color);
+			font-weight: 400;
+			text-decoration-color: var(--font-light-color);
+			text-decoration-thickness: 1px;
+			padding: 5px 0;
+		}
+
+			body > footer > #footer-nav-misc > a:hover {
+				text-decoration-color: var(--font-mid-color);
+			}
+
+		body > footer > #footer-nav-social *:not(:first-child) {
+			margin-left: 15px;
+		}
+
+		body > footer > #footer-nav-social object {
+			pointer-events: none;
+		}
+
+		body > footer > #footer-nav-social > a {
+			text-decoration:  none;
+		}
+
+@media screen and (max-width: 620px) {
+	body > footer {
+		flex-direction: column-reverse;
+	}
+
+	body > footer > #footer-nav-social {
+		margin-bottom: 10px;
+	}
+}
+
+/* ARTICLE LAYOUT */
+
+.basic-article {
+	position: relative;
+	max-width: 92%;
+	left: 50%;
+	transform: translateX( -50% );
+}
+
+@media screen and (max-width: 620px) {
+	.basic-article {
+		max-width: 100%;
+	}
+}
+
+	.basic-article header {
+		position: relative;
+		width: calc( 100vh + 25vw );
+		max-width: 100%;
+		max-height: 50vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+	}
+
+		.basic-article header img,
+		.basic-article header video {
+			width: 100%;
+			object-fit: cover;
+		}
+
+	.basic-article article {
+		position: relative;
+		width: calc( 90vh + 10vw );
+		max-width: calc( 89% - 15px );
+		background-color: var( --bg-light-color );
+		transform: translateY( -8vh );
+		padding: 30px calc( 5px + 3% );
+		margin-bottom: -8vh; /* to balance the Y translate */
+	}
+
+	@media screen and (max-width: 620px) {
+		.basic-article article {
+			transform: none;
+			padding: 30px 0;
+			margin-bottom: 0;
+		}
+	}
+
+		.basic-article article h1 {
+			display: inline-block;
+			font-size: 3.5em;
+			font-weight: 600;
+			border-top: solid 6px var(--focus-color);
+			padding-top: 8px;
+			padding-bottom: 5px;
+		}
+
+		.basic-article article h2 {
+			position: relative;
+			display: inline-block;
+			font-size: 1.6em;
+			font-weight: 600;
+			padding-top: 10px;
+			padding-bottom: 2px;
+		}
+
+			.basic-article article h2:after {
+				content: "";
+				position: absolute;
+				width: 32px;
+				left: 0;
+				top: 0;
+				border-top: solid 4px var(--focus-color);
+			}
+
+			.basic-article article h2 span {
+				position: absolute;
+				top: -100px;
+			}
+
+		@media screen and (max-width: 800px) {
+
+			.basic-article article h1 {
+				font-size: 2em;
+			}
+
+			.basic-article article h2 {
+				font-size: 1.3em;
+			}
+
+		}
+
+		.basic-article article aside {
+			font-size: 0.95em;
+			font-weight: 400;
+			color:  var(--font-mid-color);
+		}
+
+		.basic-article article p {
+			padding-top: 23px;
+		}
+
+		.basic-article article p:not(:last-child) {
+			padding-bottom: 50px;
+		}
+
+		.basic-article article figure {
+			position: relative;
+			width: 100%;
+			margin: 0;
+			padding: 25px 0;
+			border-bottom: 1px solid var(--font-light-color);
+		}
+
+			.basic-article article img,
+			.basic-article article video
+			{
+				width: 100%;
+				object-fit: cover;
+			}
+
+			.basic-article article figcaption {
+				padding-top: 4px;
+				font-size: 0.95em;
+				font-weight: 400;
+				color: var(--font-mid-color);
+			}
+
+			.basic-article article .container {
+				position: relative;
+				overflow: hidden;
+				width: 100%;
+				padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+			}
+
+				.basic-article article .container iframe {
+					position: absolute;
+					top: 0;
+					left: 0;
+					bottom: 0;
+					right: 0;
+					width: 100%;
+					height: 100%;
+				}
+
+        
+
+    </style>
+
+</head>
+<body>
+
+    <header id="navbar">
+        <a href="/">
+            <img id="logo" src="/assets/logo.png" alt="Mariotto Design logo">
+        </a>
+        <nav>
+            <a href="/services">Services</a>
+            <a href="/about">About us</a>
+            <a href="/contact">Contact</a>
+        </nav>
+        <button onclick="toggleMenu()" aria-label="menu">
+            <object class="a" data="/assets/bars-icon.svg" width="22" height="22" aria-label="bars icon"></object>
+            <object class="b" data="/assets/cross-icon.svg" width="22" height="22" aria-label="cross icon"></object>
+        </button>
+    </header>
+
+    <script type="text/javascript">
+        let dropdownEnabled = false;
+        const navbar = document.querySelector("#navbar");
+        function toggleMenu() {
+            dropdownEnabled = !dropdownEnabled;
+            if ( dropdownEnabled ) {
+                navbar.classList.add('expanded');
+            } else {
+                navbar.classList.remove('expanded');
+            }
+        }
+    </script>
+
+    <main id="services-page" class="basic-article">
+	<header>
+		<video autoplay muted loop title="high jewelry conception using Rhino 3D">
+			<source src="/assets/cad-service-teaser.mp4"
+		type="video/mp4">
+			Sorry, your browser doesn't support embedded videos.
+		</video>
+		<video autoplay muted loop style="display: none;" title="earrings video rendering using Blender">
+			<source src="/assets/rendering-service-teaser.mp4"
+		type="video/mp4">
+			Sorry, your browser doesn't support embedded videos.
+		</video>
+		<video autoplay muted loop style="display: none;" title="3D graphics programming">
+			<source src="/assets/innovation-service-teaser.mp4"
+		type="video/mp4">
+			Sorry, your browser doesn't support embedded videos.
+		</video>
+	</header>
+	<article>
+		<h1>Our services</h1>
+		<aside>Thu Apr 21 2022</aside>
+		<p>
+			Mariotto Design supports jewelry companies with the technical design and development of their projects. The most demanding market players trust us to take on the 3D development of their jewelry and high jewelry pieces. We have experience working with different kinds of design processes and can fit seamlessly in your pipeline.
+		</p>
+		<h2>CAD/CAM services for jewelry companies<span id="CAD"></span></h2>
+		<figure>
+			<img src="/assets/services-CAD.jpg" alt="design process of a high jewelry ring">
+			<figcaption>Development of a high jewelry ring with morganite and diamonds on white gold</figcaption>
+		</figure>
+		<p>
+			Computer Aided Design (CAD) and Computer Aided Manufacturing (CAM) have become the standard workflow in the jewelry and even the high jewelry industry. CAD and CAM improve manufacturers speed, quality management, and adaptability.
+			<br><br>
+			Mariotto Design gathered experience of 3D modeling for technical product design with several of the most demanding jewelry manufacturers. Designing a perfect piece of jewelry requires having a good understanding of the whole crafting process, to create parts than can be perfectly produced, assembled, polished, set with stones, and plated. When in doubt about any stage of the processing of a particular jewelry piece, Mariotto Design can rely on a dependable network of experts and advisors. If you didn't reach the highest quality standards yet, we can help you attain it.
+		</p>
+		<h2>Computer-generated imagery<span id="rendering"></span></h2>
+		<figure>
+			<video autoplay muted loop controls title="high jewelry drop earrings 3D rendering showcase">
+				<source src="/assets/services-rendering-video.mp4"
+				type="video/mp4">
+				Sorry, your browser doesn't support embedded videos.
+			</video>
+			<figcaption>video rendering of drop earrings for Estelle Lagarde (showcased here with her consent)</figcaption>
+		</figure>
+		<p>
+			It is now possible to produce artificial images of jewelry pieces so realistic that most people wouldn't spot them as 3D rendered.
+			<br><br>
+			This technique has many benefits over traditionnal photography. First of all, the items don't have to actually exist, which can save time in promoting new products, or help in testing the market for potential new designs that you didn't start manufacturing. It also helps the design process by allowing to iterate easily upon metal and gem materials.
+			<br><br>
+			Mariotto Design is able to use cutting-edge tools and technology to produce computer-generated imagery up to your expectations.
+		</p>
+		<h2>Innovation<span id="innovation"></span></h2>
+		<figure>
+			<img src="/assets/services-innovation.jpg" alt="programming setup showcasing gemviewr.com development">
+			<figcaption>Programming of the website <a href="https://gemviewr.com">GemViewr.com</a>, a free 3D jewelry viewer created and maintained by Mariotto Design</figcaption>
+		</figure>
+		<p>
+			Mastering the current best tools for jewelry CAD is not enough to garantee that Mariotto Design will stay at the forefront.
+			<br><br>
+			We are commited to driving the jewelry design community forward, by creating new tools to speed up and improve our processes. We are proud to have launched <a href="https://gemviewr.com">GemViewr.com</a>, a free 3D viewer web platform helping jewelry designers to communicate about their creations. We also launched <a href="https://github.com/felixmariotto/rhino_awesome_pave">rhino_awesome_pave</a>, a free and open-source addon for Rhino that helps with the drawing of round gem pavé.
+			<br><br>
+			We are able to create tailor-made technological solutions for your particular needs. Do you want to automate parts of your process, explore the routes of generative designs, or make your website unique ? Then let us talk about your ideas.
+		</p>
+	</article>
+</main>
+    
+    <footer>
+        <nav id="footer-nav-misc">
+            <a href="https://commandes.greffe-tc-paris.fr/fr/societe/7501-2022B11822-912080306-mariotto-design.html" target="_blank">
+                Mariotto Design - SAS immatriculée au greffe de Paris<br>
+            </a>
+            <a href="/contact">Contact us</a>
+        </nav>
+        <nav id="footer-nav-social">
+            <a href="https://www.linkedin.com/company/mariotto-design/about", target="_blank">
+                <object data="/assets/linkedin-icon.svg" width="25" height="25" aria-label="linkedin icon"></object>
+            </a>
+            <a href="https://www.instagram.com/felixmariotto_design", target="_blank">
+                <object data="/assets/instagram-icon.svg" width="25" height="25" aria-label="instagram icon"></object>
+            </a>
+            <a href="https://www.facebook.com/felix.mariottopro", target="_blank">
+                <object data="/assets/facebook-icon.svg" width="25" height="25" aria-label="facebook icon"></object>
+            </a>
+        </nav>
+    </footer>
+
+    
+        <script>
+
+            
+const videoElements = document.querySelectorAll('#services-page header video');
+
+Array.from( videoElements ).forEach( ( videoElement, i ) => {
+
+	const nextVideoElement = videoElements[ ( i + 1 ) % 3 ];
+
+	videoElement.addEventListener( "timeupdate", function () {
+
+		if ( videoElement.currentTime > videoElement.duration - 0.5 ) {
+
+			videoElement.pause();
+
+			videoElement.style.display = 'none';
+
+			nextVideoElement.style.display = 'unset';
+
+			nextVideoElement.currentTime = 0.5;
+
+			nextVideoElement.play();
+
+		}
+
+	});
+
+} );
+
+
+        </script>
+    
+
+</body>
+</html>
